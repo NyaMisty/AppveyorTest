@@ -1,5 +1,5 @@
 environment:
-  APPVEYOR_RDP_PASSWORD: MagicPass
+  APPVEYOR_RDP_PASSWORD: MagicPass@1024
 
 before_build:
   - set
