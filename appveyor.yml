@@ -2,5 +2,6 @@ environment:
   APPVEYOR_RDP_PASSWORD: MagicPass@1024
 
 before_build:
+  - ps: iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))  
   - start cmd /K set
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))  
